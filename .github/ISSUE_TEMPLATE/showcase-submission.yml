@@ -1,0 +1,44 @@
+name: Showcase submission
+description: Propose an original interactive experience for the Hunger G Showcase.
+title: "[Showcase] "
+labels: [showcase]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing an idea. Showcase entries should be original, polished, accessible, and reproducible.
+  - type: input
+    id: project-name
+    attributes:
+      label: Project name
+      placeholder: Your project's name
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What does it do?
+      description: Tell us what someone can explore, learn, or create.
+    validations:
+      required: true
+  - type: input
+    id: repository
+    attributes:
+      label: Repository or demo URL
+      placeholder: https://github.com/...
+  - type: textarea
+    id: hunger-g
+    attributes:
+      label: How did Hunger G help?
+      description: Share the workflow, not private model or account details.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Submission checklist
+      options:
+        - label: The project is original or clearly credited.
+        - label: It works on desktop and mobile.
+        - label: It includes setup instructions.
+        - label: It respects accessibility and reduced-motion preferences.

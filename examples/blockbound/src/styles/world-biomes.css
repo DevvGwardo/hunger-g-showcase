@@ -1,0 +1,108 @@
+.world-section { position: relative; overflow: hidden; color: var(--ink); background: var(--paper); }
+.world-section__texture { position: absolute; inset: 0; opacity: .25; background-image: linear-gradient(rgba(31, 54, 39, .08) 1px, transparent 1px), linear-gradient(90deg, rgba(31, 54, 39, .08) 1px, transparent 1px); background-size: 80px 80px; mask-image: linear-gradient(to bottom, #000, transparent 70%); pointer-events: none; }
+.world-section .container { position: relative; }
+.world-intro-grid { display: grid; grid-template-columns: 1.12fr .88fr; align-items: end; gap: clamp(50px, 8vw, 130px); }
+.world-intro-grid .display-heading { font-size: clamp(52px, 5.8vw, 86px); }
+.world-intro-copy { padding-bottom: 5px; }
+.world-intro-copy > p:not(.lead-copy) { margin: 20px 0 25px; color: var(--ink-soft); font-size: 14px; line-height: 1.85; }
+.world-coordinate { display: flex; align-items: center; gap: 16px; margin-top: 68px; padding-block: 19px; border-block: 1px solid var(--line); font-size: 9px; font-weight: 800; letter-spacing: .13em; }
+.world-coordinate > svg { width: 21px; color: #547840; }
+.world-coordinate__line { height: 1px; flex: 1; background: var(--line); }
+.world-coordinate__status { display: flex; align-items: center; gap: 8px; }
+.world-coordinate__status i { width: 7px; height: 7px; background: #6ba448; box-shadow: 0 0 0 4px rgba(107, 164, 72, .13); }
+.stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
+.stat-card { position: relative; min-height: 255px; overflow: hidden; padding: 27px 28px; background: rgba(255, 255, 246, .48); border: 1px solid var(--line); transition: background .3s ease, transform .3s ease, box-shadow .3s ease; }
+.stat-card:hover { z-index: 1; background: #fafbef; transform: translateY(-7px); box-shadow: 0 18px 40px rgba(32, 48, 32, .1); }
+.stat-card__index { display: block; color: var(--ink-soft); font-size: 8px; font-weight: 800; letter-spacing: .16em; }
+.stat-card strong { display: block; margin: 24px 0 10px; font-family: var(--font-display); font-size: clamp(62px, 6vw, 88px); font-weight: 600; letter-spacing: -.06em; line-height: .9; }
+.stat-card strong small { font-family: var(--font-body); font-size: 12px; font-weight: 700; letter-spacing: 0; }
+.stat-card p { max-width: 250px; margin: 0; color: var(--ink-soft); font-size: 12px; line-height: 1.65; }
+.stat-card__corner { position: absolute; right: 0; bottom: 0; width: 28px; height: 28px; background: var(--lime); clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+.biome-marquee { margin-top: clamp(80px, 9vw, 130px); overflow: hidden; padding-block: 19px; color: #edf4dc; background: var(--ink); border-block: 1px solid rgba(255, 255, 255, .08); }
+.biome-marquee__track { display: flex; width: max-content; animation: marquee 42s linear infinite; }
+.biome-marquee:hover .biome-marquee__track { animation-play-state: paused; }
+.biome-marquee__item { display: flex; align-items: center; gap: 25px; padding-right: 50px; font-family: var(--font-display); font-size: 31px; font-weight: 550; letter-spacing: -.02em; text-transform: uppercase; white-space: nowrap; }
+.biome-marquee__item > span { color: rgba(237, 244, 220, .4); font-family: var(--font-body); font-size: 9px; font-weight: 800; letter-spacing: .12em; }
+.biome-marquee__item i { width: 11px; height: 11px; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+.world-scroll-cue { display: flex; width: fit-content; align-items: center; gap: 10px; margin: 28px auto 0; color: var(--ink-soft); font-size: 9px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.world-scroll-cue svg { width: 15px; }
+
+.biome-explorer { position: relative; color: #f0f4e4; background: #0c1714; }
+.biome-pin { position: relative; height: 100svh; min-height: 720px; overflow: hidden; background: #101a18; isolation: isolate; }
+.biome-slides, .biome-slide { position: absolute; inset: 0; }
+.biome-slide { opacity: 0; visibility: hidden; transform: scale(1.045); transition: opacity .9s ease, visibility .9s, transform 1.4s cubic-bezier(.2,.7,.2,1); }
+.biome-slide.is-active { opacity: 1; visibility: visible; transform: scale(1); }
+.biome-art { position: absolute; inset: 0; overflow: hidden; background: #16221e; }
+.biome-art > svg { width: 100%; height: 100%; transform: translate3d(0, var(--scene-y, 0px), 0) scale(1.015); transition: transform .15s linear; }
+.biome-stage__shade { position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, rgba(6, 14, 13, .84) 0%, rgba(7, 16, 14, .54) 35%, rgba(7, 16, 14, .08) 68%), linear-gradient(0deg, rgba(6, 13, 12, .92), transparent 42%, rgba(6, 13, 12, .2)); pointer-events: none; }
+.biome-stage__grid { position: absolute; z-index: 1; inset: 0; opacity: .12; background-image: linear-gradient(rgba(225, 245, 220, .14) 1px, transparent 1px), linear-gradient(90deg, rgba(225, 245, 220, .14) 1px, transparent 1px); background-size: 100px 100px; mask-image: linear-gradient(90deg, #000, transparent 55%); pointer-events: none; }
+.biome-stage__top { position: absolute; z-index: 3; top: 108px; right: 0; left: 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.biome-stage__top .eyebrow { margin: 0; }
+.biome-stage__coordinates { display: flex; align-items: center; gap: 9px; color: rgba(240, 246, 229, .6); font-size: 8px; font-weight: 750; letter-spacing: .12em; }
+.biome-stage__coordinates svg { width: 17px; color: var(--biome-accent); }
+.biome-stage__chapter { position: absolute; z-index: 2; top: 21%; right: 5vw; display: flex; align-items: center; gap: 12px; color: rgba(244, 248, 233, .7); font-family: var(--font-display); }
+.biome-stage__chapter span { font-size: clamp(64px, 8vw, 120px); line-height: 1; }
+.biome-stage__chapter i { width: 46px; height: 1px; background: currentColor; opacity: .4; }
+.biome-copy { position: absolute; z-index: 3; top: 23%; left: max(48px, calc((100vw - var(--container)) / 2)); width: min(540px, 43vw); animation: biomeCopyIn .7s ease both; }
+@keyframes biomeCopyIn { from { opacity: 0; transform: translateY(20px); clip-path: inset(0 0 30% 0); } to { opacity: 1; transform: none; clip-path: inset(0); } }
+.biome-copy__kicker { margin: 0 0 13px; color: var(--biome-accent); font-size: 10px; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
+.biome-copy h2 { margin: 0; font-family: var(--font-display); font-size: clamp(72px, 7.8vw, 124px); font-weight: 630; letter-spacing: -.055em; line-height: .86; text-transform: uppercase; text-shadow: 0 8px 35px rgba(0, 0, 0, .22); }
+.biome-copy__description { max-width: 480px; margin: 22px 0 0; color: rgba(247, 248, 233, .92); font-size: clamp(16px, 1.4vw, 20px); font-weight: 560; line-height: 1.55; }
+.biome-copy__detail { max-width: 470px; margin: 14px 0 0; color: rgba(237, 244, 228, .62); font-size: 11px; line-height: 1.75; }
+.biome-copy__meta { display: flex; gap: 32px; margin-top: 24px; padding-top: 17px; border-top: 1px solid rgba(238, 247, 228, .18); }
+.biome-copy__meta div { display: grid; gap: 6px; }
+.biome-copy__meta span { color: rgba(239, 246, 229, .46); font-size: 7px; font-weight: 850; letter-spacing: .16em; }
+.biome-copy__meta strong { color: #edf4e0; font-size: 10px; font-weight: 650; }
+.biome-selector-wrap { position: absolute; z-index: 4; right: max(32px, calc((100vw - var(--container)) / 2)); bottom: 34px; left: max(32px, calc((100vw - var(--container)) / 2)); }
+.biome-selector__label { display: flex; justify-content: space-between; margin-bottom: 10px; color: rgba(239, 246, 229, .55); font-size: 7px; font-weight: 800; letter-spacing: .15em; }
+.biome-selector__label span:last-child { display: flex; align-items: center; gap: 7px; }
+.biome-selector__label svg { width: 12px; height: 12px; }
+.biome-selector { display: grid; grid-template-columns: repeat(5, 1fr); gap: 7px; }
+.biome-tab { position: relative; display: grid; min-width: 0; height: 78px; grid-template-columns: 68px 1fr auto; align-items: center; gap: 11px; padding: 7px; overflow: hidden; color: rgba(240, 246, 229, .65); text-align: left; background: rgba(12, 24, 21, .72); border: 1px solid rgba(237, 247, 226, .16); backdrop-filter: blur(14px); cursor: pointer; transition: color .25s ease, border-color .25s ease, background .25s ease, transform .25s ease; }
+.biome-tab::after { position: absolute; right: 0; bottom: 0; left: 0; height: 3px; background: var(--biome-accent); content: ''; transform: scaleX(0); transform-origin: left; transition: transform .3s ease; }
+.biome-tab:hover { color: #fff; border-color: rgba(237, 247, 226, .4); transform: translateY(-3px); }
+.biome-tab.is-active { color: #f7faee; background: rgba(21, 39, 32, .92); border-color: var(--biome-accent); }
+.biome-tab.is-active::after { transform: scaleX(1); }
+.biome-tab__thumb { width: 68px; height: 58px; overflow: hidden; border: 1px solid rgba(255, 255, 255, .12); }
+.biome-tab__thumb svg { width: 100%; height: 100%; }
+.biome-tab__text { display: grid; min-width: 0; gap: 4px; }
+.biome-tab__text small { overflow: hidden; color: rgba(240, 246, 229, .45); font-size: 6px; font-weight: 800; letter-spacing: .08em; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
+.biome-tab__text strong { overflow: hidden; font-family: var(--font-display); font-size: 18px; font-weight: 550; letter-spacing: -.02em; text-overflow: ellipsis; white-space: nowrap; }
+.biome-tab__arrow { width: 14px; color: var(--biome-accent); opacity: 0; transform: translate(-4px, 4px); transition: opacity .25s ease, transform .25s ease; }
+.biome-tab.is-active .biome-tab__arrow, .biome-tab:hover .biome-tab__arrow { opacity: 1; transform: none; }
+.biome-progress { display: flex; gap: 5px; margin-top: 8px; }
+.biome-progress i { height: 2px; flex: 1; background: rgba(239, 246, 229, .14); transition: background .4s ease; }
+.biome-progress i.is-filled { background: var(--biome-accent); }
+.biome-audio-hint { position: absolute; z-index: 4; right: max(32px, calc((100vw - var(--container)) / 2)); bottom: 11px; display: flex; align-items: center; gap: 6px; margin: 0; color: rgba(239, 246, 229, .38); font-size: 7px; letter-spacing: .04em; }
+.biome-audio-hint i { width: 5px; height: 5px; background: currentColor; }
+.biome-audio-hint.is-on { color: var(--biome-accent); }
+.biome-audio-hint.is-on i { box-shadow: 0 0 8px currentColor; }
+
+.biome-particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; mix-blend-mode: screen; }
+.biome-particles i { position: absolute; top: var(--y); left: var(--x); display: block; width: 4px; height: 4px; background: var(--biome-accent); animation: biomeParticle var(--duration) var(--delay) ease-in-out infinite; }
+.biome-particles--pollen i { width: 3px; height: 3px; background: #fff0b7; animation-name: pollen; }
+.biome-particles--spores i { background: #80e6a2; box-shadow: 0 0 8px #80e6a2; animation-name: spores; }
+.biome-particles--crystals i { width: 3px; height: 8px; background: #c0a7ff; animation-name: crystalPulse; }
+.biome-particles--embers i { width: 3px; height: 5px; background: #ffad62; animation-name: embers; }
+.biome-particles--stardust i { width: 2px; height: 2px; background: #73f1de; animation-name: stardust; }
+@keyframes pollen { 50% { opacity: .25; transform: translate(24px, -18px); } }
+@keyframes spores { 50% { opacity: .2; transform: translate(-18px, -30px); } }
+@keyframes crystalPulse { 50% { opacity: .25; transform: translateY(10px) scale(.7); } }
+@keyframes embers { from { opacity: 0; transform: translateY(30px); } 30% { opacity: .8; } to { opacity: 0; transform: translateY(-80px) translateX(20px); } }
+@keyframes stardust { 50% { opacity: .2; transform: translate(12px, -16px); } }
+
+.biome-static-list { padding-top: 120px; padding-bottom: 120px; }
+.section-heading--light { max-width: 850px; margin-bottom: 70px; }
+.section-heading--light h2 { margin: 0; font-family: var(--font-display); font-size: clamp(58px, 8vw, 106px); font-weight: 620; letter-spacing: -.05em; line-height: .9; }
+.section-heading--light > p:last-child { max-width: 500px; color: rgba(240, 246, 229, .62); font-size: 15px; line-height: 1.7; }
+.biome-static-card { display: grid; min-height: 610px; grid-template-columns: 1.15fr .85fr; margin-bottom: 34px; overflow: hidden; scroll-margin-top: 86px; border: 1px solid var(--line-light); background: #111e19; }
+.biome-static-card__art { position: relative; min-height: 480px; }
+.biome-static-card__copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(34px, 5vw, 72px); background: rgba(14, 27, 22, .94); }
+.biome-static-card__number { color: var(--lime); font-size: 9px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+.biome-static-card h3 { margin: 18px 0; font-family: var(--font-display); font-size: clamp(50px, 5.2vw, 78px); font-weight: 600; letter-spacing: -.045em; line-height: .9; text-transform: uppercase; }
+.biome-static-card__copy > p { color: rgba(240, 246, 229, .65); font-size: 13px; line-height: 1.8; }
+.biome-static-card dl { display: grid; gap: 18px; margin: 26px 0 0; padding-top: 24px; border-top: 1px solid var(--line-light); }
+.biome-static-card dl div { display: grid; grid-template-columns: 90px 1fr; gap: 15px; }
+.biome-static-card dt { color: rgba(240, 246, 229, .72); font-size: 8px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.biome-static-card dd { margin: 0; color: #eef4df; font-size: 11px; line-height: 1.6; }

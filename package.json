@@ -1,0 +1,19 @@
+{
+  "name": "hunger-g-showcase",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A public showcase of original interactive experiences made with Hunger G and OpenCode Go.",
+  "type": "module",
+  "workspaces": [
+    "examples/blockbound"
+  ],
+  "scripts": {
+    "setup": "npm install",
+    "dev": "npm run dev --workspace=blockbound",
+    "build": "npm run build --workspace=blockbound",
+    "lint": "npm run lint --workspace=blockbound",
+    "typecheck": "npm run typecheck --workspace=blockbound",
+    "test": "npm run test --workspace=blockbound",
+    "build:pages": "node scripts/build-pages.mjs"
+  }
+}

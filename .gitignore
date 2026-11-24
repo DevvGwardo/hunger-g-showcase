@@ -1,0 +1,8 @@
+node_modules/
+dist/
+site/
+test-results/
+playwright-report/
+lighthouse-report.json
+*.tsbuildinfo
+.DS_Store

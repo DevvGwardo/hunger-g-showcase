@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">How Hunger G turns intent into an interactive result</title>
+  <desc id="desc">Five stages: listen, shape, build, verify, and ship. A product-level workflow infographic with no private model details.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#101d18"/>
+      <stop offset="1" stop-color="#08110e"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#b9ed78"/>
+      <stop offset="1" stop-color="#73f1de"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="560" rx="24" fill="url(#bg)"/>
+  <g opacity=".08" stroke="#cde8c0">
+    <path d="M0 80h1200M0 160h1200M0 240h1200M0 320h1200M0 400h1200M0 480h1200"/>
+    <path d="M80 0v560M160 0v560M240 0v560M320 0v560M400 0v560M480 0v560M560 0v560M640 0v560M720 0v560M800 0v560M880 0v560M960 0v560M1040 0v560M1120 0v560"/>
+  </g>
+  <g font-family="'Courier New',monospace">
+    <text x="60" y="62" fill="#b9ed78" font-size="15" font-weight="700" letter-spacing="3">HUNGER G / PRODUCT WORKFLOW</text>
+    <text x="60" y="112" fill="#f1f4e5" font-size="36" font-weight="700">FROM INTENT TO INTERACTIVE</text>
+    <text x="1140" y="68" fill="#7f9689" font-size="13" text-anchor="end">ONE REPEATABLE PROCESS</text>
+  </g>
+  <path d="M126 258h948" stroke="url(#line)" stroke-width="3" stroke-dasharray="7 9" opacity=".65"/>
+  <g transform="translate(60 176)">
+    <g>
+      <rect width="196" height="258" rx="12" fill="#15261f" stroke="#34513f"/>
+      <rect x="18" y="18" width="34" height="34" fill="#b9ed78"/>
+      <text x="35" y="41" text-anchor="middle" font-family="'Courier New',monospace" font-size="16" font-weight="700" fill="#102017">01</text>
+      <g transform="translate(70 92)" fill="none" stroke="#b9ed78" stroke-width="4">
+        <path d="M0 8h44v30H24L12 46v-8H0Z"/>
+        <path d="M12 20h20M12 28h14"/>
+      </g>
+      <text x="18" y="172" font-family="'Courier New',monospace" font-size="24" font-weight="700" fill="#f1f4e5">LISTEN</text>
+      <text x="18" y="201" font-family="Arial,sans-serif" font-size="13" fill="#a8b9ad"><tspan x="18">Turn a rough idea into</tspan><tspan x="18" dy="19">a clear, useful brief.</tspan></text>
+      <text x="18" y="242" font-family="'Courier New',monospace" font-size="10" fill="#6f8979" letter-spacing="1">INTENT</text>
+    </g>
+    <g transform="translate(226)">
+      <rect width="196" height="258" rx="12" fill="#15261f" stroke="#34513f"/>
+      <rect x="18" y="18" width="34" height="34" fill="#9dde73"/>
+      <text x="35" y="41" text-anchor="middle" font-family="'Courier New',monospace" font-size="16" font-weight="700" fill="#102017">02</text>
+      <g transform="translate(70 90)" fill="none" stroke="#9dde73" stroke-width="4">
+        <circle cx="24" cy="24" r="22"/><path d="m30 18-12 12 12 12M30 18H16"/>
+      </g>
+      <text x="18" y="172" font-family="'Courier New',monospace" font-size="24" font-weight="700" fill="#f1f4e5">SHAPE</text>
+      <text x="18" y="201" font-family="Arial,sans-serif" font-size="13" fill="#a8b9ad"><tspan x="18">Choose the experience,</tspan><tspan x="18" dy="19">system, and constraints.</tspan></text>
+      <text x="18" y="242" font-family="'Courier New',monospace" font-size="10" fill="#6f8979" letter-spacing="1">DIRECTION</text>
+    </g>
+    <g transform="translate(452)">
+      <rect width="196" height="258" rx="12" fill="#15261f" stroke="#34513f"/>
+      <rect x="18" y="18" width="34" height="34" fill="#73f1de"/>
+      <text x="35" y="41" text-anchor="middle" font-family="'Courier New',monospace" font-size="16" font-weight="700" fill="#102017">03</text>
+      <g transform="translate(68 88)" fill="none" stroke="#73f1de" stroke-width="4">
+        <path d="m24 0 22 12v24L24 48 2 36V12Z"/><path d="m2 12 22 12 22-12M24 24v24"/>
+      </g>
+      <text x="18" y="172" font-family="'Courier New',monospace" font-size="24" font-weight="700" fill="#f1f4e5">BUILD</text>
+      <text x="18" y="201" font-family="Arial,sans-serif" font-size="13" fill="#a8b9ad"><tspan x="18">Create original interface,</tspan><tspan x="18" dy="19">logic, and content.</tspan></text>
+      <text x="18" y="242" font-family="'Courier New',monospace" font-size="10" fill="#6f8979" letter-spacing="1">CRAFT</text>
+    </g>
+    <g transform="translate(678)">
+      <rect width="196" height="258" rx="12" fill="#15261f" stroke="#34513f"/>
+      <rect x="18" y="18" width="34" height="34" fill="#b7a0ff"/>
+      <text x="35" y="41" text-anchor="middle" font-family="'Courier New',monospace" font-size="16" font-weight="700" fill="#102017">04</text>
+      <g transform="translate(70 90)" fill="none" stroke="#b7a0ff" stroke-width="4">
+        <path d="M24 0 44 8v18c0 14-9 23-20 28C9 49 0 40 0 26V8Z"/><path d="m14 25 8 8 15-17"/>
+      </g>
+      <text x="18" y="172" font-family="'Courier New',monospace" font-size="24" font-weight="700" fill="#f1f4e5">VERIFY</text>
+      <text x="18" y="201" font-family="Arial,sans-serif" font-size="13" fill="#a8b9ad"><tspan x="18">Test interactions, mobile,</tspan><tspan x="18" dy="19">accessibility, and speed.</tspan></text>
+      <text x="18" y="242" font-family="'Courier New',monospace" font-size="10" fill="#6f8979" letter-spacing="1">CONFIDENCE</text>
+    </g>
+    <g transform="translate(904)">
+      <rect width="196" height="258" rx="12" fill="#15261f" stroke="#73f1de"/>
+      <rect x="18" y="18" width="34" height="34" fill="#73f1de" filter="url(#glow)"/>
+      <text x="35" y="41" text-anchor="middle" font-family="'Courier New',monospace" font-size="16" font-weight="700" fill="#102017">05</text>
+      <g transform="translate(68 86)" fill="none" stroke="#73f1de" stroke-width="4">
+        <path d="M14 48C-2 26 12 4 34 10c8-12 28-4 26 12 14 6 10 26-4 28H14Z"/><path d="M24 48V28m-10 10 10-10 10 10"/>
+      </g>
+      <text x="18" y="172" font-family="'Courier New',monospace" font-size="24" font-weight="700" fill="#f1f4e5">SHIP</text>
+      <text x="18" y="201" font-family="Arial,sans-serif" font-size="13" fill="#a8b9ad"><tspan x="18">Package, document,</tspan><tspan x="18" dy="19">and publish the result.</tspan></text>
+      <text x="18" y="242" font-family="'Courier New',monospace" font-size="10" fill="#73f1de" letter-spacing="1">IMPACT</text>
+    </g>
+  </g>
+  <g transform="translate(60 474)" font-family="'Courier New',monospace">
+    <rect width="1040" height="46" rx="6" fill="#0c1713" stroke="#2b4436"/>
+    <text x="24" y="29" fill="#7f9689" font-size="12" letter-spacing="1">GOAL IN</text>
+    <path d="M118 23h210" stroke="#b9ed78" stroke-width="2"/>
+    <path d="m318 17 10 6-10 6" fill="none" stroke="#b9ed78" stroke-width="2"/>
+    <text x="360" y="29" fill="#f1f4e5" font-size="14" font-weight="700">WORKING RESULT OUT</text>
+    <text x="1016" y="29" fill="#73f1de" font-size="11" text-anchor="end">REPEATABLE · ORIGINAL · OPEN</text>
+  </g>
+</svg>

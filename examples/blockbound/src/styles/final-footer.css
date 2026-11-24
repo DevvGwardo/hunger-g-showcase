@@ -1,0 +1,53 @@
+.final-section { position: relative; height: 100svh; min-height: 820px; overflow: hidden; color: #eef5e7; background: #090e1c; isolation: isolate; }
+.stronghold-scene { position: absolute; z-index: -3; inset: 0; }
+.stronghold-scene > svg { width: 100%; height: 100%; }
+.stronghold-scene__vignette { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(5, 9, 17, .92), transparent 55%), linear-gradient(90deg, rgba(5, 9, 17, .3), transparent 50%, rgba(5, 9, 17, .3)); }
+.star--twinkle { animation: starTwinkle 4s ease-in-out infinite; }
+.star--twinkle:nth-child(3n) { animation-delay: -2s; }
+@keyframes starTwinkle { 50% { opacity: .25; } }
+.final-section__topline { position: absolute; z-index: 3; top: 108px; right: max(32px, calc((100vw - var(--container)) / 2)); left: max(32px, calc((100vw - var(--container)) / 2)); display: flex; justify-content: space-between; color: rgba(235, 243, 230, .52); font-size: 8px; font-weight: 800; letter-spacing: .14em; }
+.final-section__topline span { display: flex; align-items: center; gap: 9px; }
+.final-section__topline i { width: 6px; height: 6px; background: var(--cyan); box-shadow: 0 0 9px var(--cyan); }
+.final-section__topline svg { width: 15px; color: var(--cyan); }
+.portal { position: absolute; z-index: -1; top: 44%; left: 50%; width: clamp(112px, 11vw, 170px); height: clamp(164px, 25vw, 248px); transform: translate(-50%, -50%); pointer-events: none; }
+.portal__aura { position: absolute; inset: -90px; background: radial-gradient(ellipse, rgba(99, 244, 220, .3), rgba(128, 101, 232, .11) 44%, transparent 70%); animation: portalAura 3.8s ease-in-out infinite; }
+@keyframes portalAura { 50% { opacity: .66; transform: scale(1.08); } }
+.portal__frame { position: absolute; inset: 0; padding: 12px; background: #322a46; border: 4px solid #211c33; clip-path: polygon(12% 0, 88% 0, 100% 12%, 100% 88%, 88% 100%, 12% 100%, 0 88%, 0 12%); box-shadow: inset 0 0 0 5px #514363, inset 0 0 0 9px #272037; }
+.portal__frame::before { position: absolute; inset: 7px; content: ''; background: repeating-linear-gradient(0deg, transparent 0 21px, rgba(13, 12, 24, .55) 21px 24px), repeating-linear-gradient(90deg, transparent 0 30px, rgba(13, 12, 24, .45) 30px 33px); }
+.portal__stone { position: absolute; z-index: 3; width: 22px; height: 18px; background: #5a4a70; border: 3px solid #30263f; }
+.portal__stone--1 { top: 2%; left: 20%; }
+.portal__stone--2 { top: 2%; right: 20%; }
+.portal__stone--3 { top: 42%; left: -4px; }
+.portal__stone--4 { top: 42%; right: -4px; }
+.portal__stone--5 { bottom: 2%; left: 20%; }
+.portal__stone--6 { right: 20%; bottom: 2%; }
+.portal__surface { position: absolute; z-index: 2; inset: 14px; overflow: hidden; background: #67e7d6; clip-path: polygon(9% 0, 91% 0, 100% 9%, 100% 91%, 91% 100%, 9% 100%, 0 91%, 0 9%); box-shadow: inset 0 0 32px #d0fff3, 0 0 35px rgba(103, 231, 214, .65); }
+.portal__swirl { position: absolute; inset: -45%; background: conic-gradient(from 20deg, #c2fff0, #4cb9c2, #7862d6, #b7a0ff, #78f4df, #c2fff0); animation: portalSpin 9s linear infinite; filter: blur(2px); }
+.portal__swirl::after { position: absolute; inset: 13%; content: ''; background: repeating-conic-gradient(from 0deg, rgba(222, 255, 245, .6) 0deg 7deg, transparent 7deg 19deg); mix-blend-mode: overlay; animation: portalSpin 14s linear infinite reverse; }
+@keyframes portalSpin { to { transform: rotate(360deg); } }
+.portal__surface > i { position: absolute; z-index: 2; bottom: -8px; left: var(--particle-x); width: 3px; height: 3px; background: #e1fff7; box-shadow: 0 0 6px #bafff2; animation: portalParticle var(--particle-duration) var(--particle-delay) linear infinite; }
+@keyframes portalParticle { to { transform: translateY(-220px) translateX(18px); opacity: 0; } }
+.final-content { position: absolute; z-index: 2; right: 0; bottom: 6.5vh; left: 0; text-align: center; }
+.final-content .eyebrow { justify-content: center; margin-bottom: 18px; }
+.final-title { margin: 0; font-family: var(--font-display); font-size: clamp(76px, 9vw, 142px); font-weight: 650; letter-spacing: -.06em; line-height: .78; text-shadow: 0 10px 40px rgba(2, 7, 15, .6); }
+.final-title .block-reveal__line:last-child { color: var(--cyan); }
+.final-content__copy { margin: 24px 0 0; color: rgba(235, 243, 230, .68); font-size: 13px; }
+.final-content__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 27px; }
+.final-section__edge { position: absolute; right: 0; bottom: 0; left: 0; display: flex; height: 12px; gap: 4px; }
+.final-section__edge i { flex: 1; background: #070c13; }
+
+.site-footer { position: relative; padding: 58px 0 28px; color: #eaf1e1; background: #070c0a; border-top: 1px solid rgba(234, 241, 225, .1); }
+.site-footer__top { display: grid; grid-template-columns: 1fr 1fr auto; align-items: center; gap: 35px; padding-bottom: 40px; }
+.brand--footer { font-size: 29px; }
+.site-footer__top p { margin: 0; color: rgba(234, 241, 225, .5); font-size: 11px; line-height: 1.7; }
+.back-to-top { display: flex; align-items: center; gap: 10px; font-size: 9px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+.back-to-top svg { width: 16px; color: var(--lime); transition: transform .2s ease; }
+.back-to-top:hover svg { transform: translateY(-4px); }
+.site-footer__links { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding-block: 23px; border-block: 1px solid rgba(234, 241, 225, .12); }
+.site-footer__links nav { display: flex; flex-wrap: wrap; gap: 27px; }
+.site-footer__links a, .site-footer__links button { display: inline-flex; align-items: center; gap: 8px; padding: 0; color: rgba(234, 241, 225, .64); background: transparent; cursor: pointer; font-size: 10px; font-weight: 700; transition: color .2s ease; }
+.site-footer__links a:hover, .site-footer__links button:hover { color: var(--lime); }
+.site-footer__links svg { width: 14px; }
+.site-footer__bottom { display: grid; grid-template-columns: 1fr 1.4fr auto; gap: 30px; align-items: start; padding-top: 25px; }
+.site-footer__bottom p { margin: 0; color: rgba(234, 241, 225, .66); font-size: 8px; line-height: 1.7; }
+.site-footer__bottom span { color: rgba(234, 241, 225, .62); font-size: 7px; font-weight: 800; letter-spacing: .13em; white-space: nowrap; }
