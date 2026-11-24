@@ -93,6 +93,132 @@ The goal is simple: make ambitious ideas tangible, keep the source open, and rai
 
 ---
 
+## Prompt archive
+
+The project briefs are preserved here for transparency and reproducibility. Expand a section to read the original user prompt.
+
+<details>
+<summary><strong>Original BLOCKBOUND build prompt</strong></summary>
+
+```text
+Create an original, fan-made Minecraft-inspired immersive landing page called “BLOCKBOUND.” Make it feel like stepping into a living voxel world—not a typical website. Go all out on visual storytelling, parallax depth, polished UI/UX, animation, and micro-interactions while keeping the experience fast, responsive, and accessible.
+
+CONCEPT
+The page follows the player from sunrise in a peaceful Overworld village, through forests, caves, the Nether, and finally into an epic nighttime Stronghold vista. Scrolling should feel like traveling through distinct biomes, with each section changing the atmosphere, lighting, palette, soundscape, and environmental animation.
+
+VISUAL DIRECTION
+- Use a bold, blocky voxel aesthetic mixed with refined contemporary editorial design.
+- Chunky pixel-inspired typography for headings, paired with a clean, highly legible UI font for body copy.
+- Color palettes inspired by Minecraft: grass greens, earthy browns, cave purples, Nether reds, and luminous cyan.
+- Layer the world into convincing depth: distant mountains, midground terrain, foreground blocks, foliage, structures, and atmospheric particles.
+- Create original CSS/SVG/canvas imagery and geometric voxel scenes. Do not copy game textures, logos, or proprietary artwork.
+- Add cinematic lighting: sun rays, fog, floating dust, glowing lava, torchlight, shadows, and subtle bloom.
+- Include a small disclaimer that this is an unofficial fan-made concept and is not affiliated with Mojang or Microsoft.
+
+PAGE EXPERIENCE
+1. HERO — “Your next adventure starts here.”
+   - Full-viewport voxel landscape with a sunrise, floating clouds, distant mountains, trees, water, and a small village.
+   - Large expressive headline with staggered pixel-block reveal animation.
+   - A prominent “Enter the world” CTA and secondary “Watch the journey” action.
+   - Scroll cue, day/night indicator, ambient particle system, and interactive parallax responding to both scrolling and pointer movement.
+   - Maybe a small animated pickaxe or compass HUD element.
+
+2. WORLD INTRO
+   - Introduce the page’s fictional community/world with concise, compelling copy.
+   - Use a horizontally moving biome strip or pinned scroll sequence.
+   - Add stat cards with animated counters and hover effects.
+
+3. BIOME EXPLORER
+   - A deep, scroll-driven section transitioning through Overworld, Deep Forest, Caverns, Nether, and End-inspired environments.
+   - Use pinned scenes where the background shifts while foreground blocks move at different speeds.
+   - Add an interactive biome selector with thumbnails, descriptions, hazards, resources, and unique atmospheric effects.
+   - Make transitions feel physical, as if the camera is flying through the landscape.
+
+4. FEATURES — “Built for every kind of player”
+   - Present 3–4 features such as Survival, Creative Building, Community Events, and Custom Worlds.
+   - Use interactive voxel cards that lift, rotate slightly, reveal glowing details, or assemble from blocks.
+   - Include real-feeling content rather than generic filler.
+
+5. COMMUNITY / GALLERY
+   - A showcase of original voxel builds and adventure moments.
+   - Implement an engaging horizontal gallery or staggered grid with image reveal effects.
+   - Add filtering or category switching with smooth layout transitions.
+
+6. CALL TO ACTION
+   - A dramatic final nighttime scene with a glowing portal or Stronghold.
+   - Headline: “The world is waiting.”
+   - Primary CTA: “Start your adventure.”
+   - Secondary CTA: “Explore the map.”
+   - Animate the portal with flowing particles, pulsing light, and subtle camera movement.
+
+7. FOOTER
+   - Clean, compact navigation and community links.
+   - Include the fan-made disclaimer.
+
+ANIMATION & INTERACTION
+- Multi-layer scroll parallax with foreground, midground, and background moving at different speeds.
+- Smooth scrolling with carefully tuned easing.
+- Scroll-triggered text reveals, clip-path transitions, block-by-block appearances, and image masking.
+- A custom cursor or subtle player reticle on desktop, while preserving normal usability.
+- Pointer-responsive depth in hero and biome scenes.
+- Animated clouds, waterfalls, torches, lava, fireflies, and drifting particles.
+- Interactive cards and buttons with tactile block-like press states.
+- Optional sound toggle with a quiet synthesized ambient soundscape; never autoplay audio.
+- Respect prefers-reduced-motion and provide a static, fully usable fallback.
+- Do not let decorative effects block scrolling, obscure content, or interfere with navigation.
+
+UI/UX REQUIREMENTS
+- Strong visual hierarchy, generous spacing, readable contrast, and consistent corners, borders, shadows, and button styles.
+- Responsive layouts designed specifically for desktop, tablet, and mobile—not simply scaled down.
+- Accessible semantic markup, keyboard navigation, visible focus states, meaningful alt text, and ARIA labels where needed.
+- Sticky or adaptive navigation with clear active-section feedback and a mobile menu.
+- Meaningful hover, focus, pressed, loading, and success states.
+- Keep the most important actions reachable within one or two interactions.
+- Use restrained motion where it supports the story; avoid constant distraction.
+
+TECHNICAL REQUIREMENTS
+- Work within the existing project stack. If starting from scratch, use React + TypeScript + Vite with CSS/Tailwind, GSAP/ScrollTrigger, Lenis, and Canvas/WebGL only where it genuinely improves the experience.
+- Prefer CSS, SVG, and Canvas for lightweight assets. Use Three.js only if needed for a signature interactive scene.
+- Optimize images, lazy-load below-the-fold content, and avoid excessive DOM nodes.
+- Target strong Lighthouse scores for performance, accessibility, and best practices.
+- No broken links, placeholder lorem ipsum, missing images, console errors, or fake buttons.
+- Include a small reusable animation utility or component system so the effects stay consistent.
+
+DELIVERABLE
+Build the complete responsive experience and refine it through a visual pass:
+- Check every major section at desktop, tablet, and mobile widths.
+- Verify scrolling, parallax, menus, filters, gallery interactions, modal/menu behavior, audio toggle, and CTAs.
+- Test keyboard navigation and reduced-motion behavior.
+- Run the available build/lint/typecheck tests and fix any issues.
+- Finish with a brief summary of the signature interactions and any performance or accessibility decisions.
+
+Aim for something portfolio-worthy: cinematic, playful, surprising, and meticulously polished—the kind of page that makes people stop scrolling just to explore it.
+```
+
+</details>
+
+<details>
+<summary><strong>Public repository and showcase prompt</strong></summary>
+
+```text
+So, use GitHub CI or CLI to create a repo for this that is public, make the README formatted professionally so that we could showcase as this is the first result of the Hunger G model that OpenCode Go has. There will be more that we will showcase on this particular repo. So, if you could make a page dedicated for this entire repo that will have a bunch of these examples on them, up to six, and Blockbound is the first one example that we're going to showcase. Make the README on the repo well branded accordingly. So it has images and an infographic of how the Hunger G model handles stuff.
+```
+
+</details>
+
+<details>
+<summary><strong>Five-game expansion prompt and execution constraint</strong></summary>
+
+```text
+Choose five other games to showcase to create websites for them and then add them to the repository.
+
+Use 10 subagents using the Hunger G Free model from OpenCode Go to tackle this.
+```
+
+</details>
+
+---
+
 ## How the work gets made
 
 Hunger G follows a clear product workflow. The infographic describes the process at a product level — not private model internals.
