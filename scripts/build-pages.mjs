@@ -20,7 +20,7 @@ for (const slug of apps) {
   console.log(`Building ${slug}...`);
   await build({
     root: resolve(root, 'examples', slug),
-    base: `/${slug}/`,
+    base: './',
     build: {
       outDir: resolve(site, slug),
       emptyOutDir: true,

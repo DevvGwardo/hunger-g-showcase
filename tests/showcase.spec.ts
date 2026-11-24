@@ -1,3 +1,5 @@
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { expect, test, type Locator, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
@@ -134,6 +136,22 @@ async function expectFragmentTargets(page: Page, links: Locator, label: string) 
     expect(targetExists, `${label}: "${anchor.label}" points to missing target ${anchor.href}`).toBe(true);
   }
 }
+
+test('built examples use portable relative asset URLs', () => {
+  for (const route of routes.slice(1)) {
+    const slug = route.path.replace(/^\/|\/$/g, '');
+    const html = readFileSync(resolve('site', slug, 'index.html'), 'utf8');
+    expect(html, `${route.name} must not use root-absolute asset URLs`).not.toMatch(
+      new RegExp(`(?:src|href)="/${slug}/`),
+    );
+    expect(html, `${route.name} should load its script relative to its page`).toMatch(
+      /<script[^>]+src="\.\/assets\//,
+    );
+    expect(html, `${route.name} should load its styles relative to its page`).toMatch(
+      /<link[^>]+href="\.\/assets\//,
+    );
+  }
+});
 
 test('homepage links to every game and its internal targets exist', async ({ page }) => {
   await visitRoute(page, routes[0], viewports[0]);
