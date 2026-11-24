@@ -5,15 +5,25 @@
   "description": "A public showcase of original interactive experiences made with Hunger G and OpenCode Go.",
   "type": "module",
   "workspaces": [
-    "examples/blockbound"
+    "examples/blockbound",
+    "examples/starfall-acre",
+    "examples/hollowlight",
+    "examples/summit",
+    "examples/ember-oath",
+    "examples/driftlight"
   ],
   "scripts": {
     "setup": "npm install",
     "dev": "npm run dev --workspace=blockbound",
-    "build": "npm run build --workspace=blockbound",
-    "lint": "npm run lint --workspace=blockbound",
-    "typecheck": "npm run typecheck --workspace=blockbound",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
     "test": "npm run test --workspace=blockbound",
+    "test:showcase": "playwright test --config=playwright.showcase.config.ts",
     "build:pages": "node scripts/build-pages.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.56.0"
   }
 }

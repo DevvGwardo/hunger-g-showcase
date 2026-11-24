@@ -24,13 +24,16 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build showcase and examples
+      - name: Build all workspaces
+        run: npm run build
+
+      - name: Build showcase pages
         run: npm run build:pages
 
       - name: Configure Pages

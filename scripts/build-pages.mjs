@@ -1,23 +1,32 @@
-import { cpSync, mkdirSync, rmSync } from 'node:fs';
+import { cpSync, rmSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { build } from 'vite';
 
-const root = process.cwd();
+const root = fileURLToPath(new URL('../', import.meta.url));
 const site = resolve(root, 'site');
-const blockbound = resolve(site, 'blockbound');
+const apps = [
+  'blockbound',
+  'starfall-acre',
+  'hollowlight',
+  'summit',
+  'ember-oath',
+  'driftlight',
+];
 
 rmSync(site, { recursive: true, force: true });
-mkdirSync(blockbound, { recursive: true });
 
-process.chdir(resolve(root, 'examples/blockbound'));
-await build({
-  base: '/blockbound/',
-  build: {
-    outDir: blockbound,
-    emptyOutDir: true,
-  },
-});
+for (const slug of apps) {
+  console.log(`Building ${slug}...`);
+  await build({
+    root: resolve(root, 'examples', slug),
+    base: `/${slug}/`,
+    build: {
+      outDir: resolve(site, slug),
+      emptyOutDir: true,
+    },
+  });
+}
 
-process.chdir(root);
 cpSync(resolve(root, 'showcase'), site, { recursive: true });
 console.log('Showcase site built in /site');
